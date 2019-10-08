@@ -41,5 +41,50 @@ namespace CustomList.UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Add_AddItemsToList_BeyondCapacityCount()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 5;
+            int actual;
+
+            testList.Add(6);
+            testList.Add(5);
+            testList.Add(4);
+            testList.Add(3);
+            testList.Add(2);
+            actual = testList.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Add_AddItemsToList_BeyondCapacityLastIndex()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            testList.Add(6);
+            testList.Add(5);
+            testList.Add(4);
+            testList.Add(3);
+            testList.Add(2);
+            actual = testList[4];
+
+            Assert.AreEqual(expected, actual);
+        }
+        public void Add_AddItemsToList_CheckLastIndex()
+        {
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            testList.Add(5);
+            testList.Add(4);
+            testList.Add(3);
+            actual = testList[2];
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
