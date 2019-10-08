@@ -9,6 +9,7 @@ namespace CustomList
     public class CustomList<T>
     {
         private T[] items;
+        public int Count { get; }
 
         public CustomList()
         {
@@ -17,7 +18,14 @@ namespace CustomList
 
         public void Add(T itemToAdd)
         {
-
+           
+        }
+        public int this[int index]
+        {
+            get
+            {
+                return [index];
+            }
         }
     }
 }

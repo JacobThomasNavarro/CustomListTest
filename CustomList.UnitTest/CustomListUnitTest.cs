@@ -73,18 +73,5 @@ namespace CustomList.UnitTest
 
             Assert.AreEqual(expected, actual);
         }
-        public void Add_AddItemsToList_CheckLastIndex()
-        {
-            CustomList<int> testList = new CustomList<int>();
-            int expected = 3;
-            int actual;
-
-            testList.Add(5);
-            testList.Add(4);
-            testList.Add(3);
-            actual = testList[2];
-
-            Assert.AreEqual(expected, actual);
-        }
     }
 }
