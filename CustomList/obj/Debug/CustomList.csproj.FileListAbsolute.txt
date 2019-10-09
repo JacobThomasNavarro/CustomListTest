@@ -1,0 +1,6 @@
+C:\Users\jt10n\Desktop\devCodeCamp\Week_04\Projects\CustomList\CustomList\obj\Debug\CustomList.csprojAssemblyReference.cache
+C:\Users\jt10n\Desktop\devCodeCamp\Week_04\Projects\CustomList\CustomList\bin\Debug\CustomList.exe.config
+C:\Users\jt10n\Desktop\devCodeCamp\Week_04\Projects\CustomList\CustomList\bin\Debug\CustomList.exe
+C:\Users\jt10n\Desktop\devCodeCamp\Week_04\Projects\CustomList\CustomList\bin\Debug\CustomList.pdb
+C:\Users\jt10n\Desktop\devCodeCamp\Week_04\Projects\CustomList\CustomList\obj\Debug\CustomList.exe
+C:\Users\jt10n\Desktop\devCodeCamp\Week_04\Projects\CustomList\CustomList\obj\Debug\CustomList.pdb

@@ -6,9 +6,6 @@ namespace CustomList.UnitTest
     [TestClass]
     public class CustomListUnitTest
     {
-        // unit test for adding multiple items to check position of last item
-        // unit test for adding multiple items to check Count property
-        // unit test for adding number of items beyond 'Capacity' but it still adds
 
         [TestMethod]
         public void Add_AddToEmptyList_ItemGoesToIndexZero()
