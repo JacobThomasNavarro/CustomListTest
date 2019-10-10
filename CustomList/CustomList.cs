@@ -25,7 +25,8 @@ namespace CustomList
         public void Add(T itemToAdd)
         {
             items[count] = itemToAdd;
-            if (Count == Capacity)
+            count++;
+            if (count == capacity)
             {
                 newArray = items;
                 capacity = capacity * 2;
@@ -37,12 +38,17 @@ namespace CustomList
                 items[count] = itemToAdd;
             }
         }
-        public int this[int index]
+        public T this[int index]
         {
             get
             {
-                return index;
+                if(index > Count - 1)
+                {
+
+                }
+                return items[index];
             }
+            set { items[index] = value; }
         }
     }
 }

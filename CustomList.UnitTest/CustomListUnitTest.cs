@@ -33,7 +33,7 @@ namespace CustomList.UnitTest
 
             // act
             testList.Add(234);
-            actual = testList.Count;
+            actual = testList.count;
 
             // assert
             Assert.AreEqual(expected, actual);
@@ -50,7 +50,7 @@ namespace CustomList.UnitTest
             testList.Add(4);
             testList.Add(3);
             testList.Add(2);
-            actual = testList.Count;
+            actual = testList.count;
 
             Assert.AreEqual(expected, actual);
         }
