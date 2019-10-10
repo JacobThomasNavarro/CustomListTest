@@ -70,5 +70,42 @@ namespace CustomList.UnitTest
 
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Remove_RemoveOneItemFromList_CountDecrease()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            // act
+            testList.Add(6);
+            testList.Add(5);
+            testList.Add(4);
+            testList.Add(3);
+            testList.Remove(4);
+            actual = testList.count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Remove_RemoveIndex1FromList_ItemsShift()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            int expected = 12;
+            int actual;
+
+            // act
+            testList.Add(14);
+            testList.Add(13);
+            testList.Add(12);
+            testList.Remove(13);
+            actual = testList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

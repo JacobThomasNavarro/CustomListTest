@@ -35,7 +35,18 @@ namespace CustomList
                 {
                     items[i] = newArray[i];
                 }
-                items[count] = itemToAdd;
+                items[Count] = itemToAdd;
+            }
+        }
+        public void Remove(T itemToRemove)
+        {
+            for(int i = 0; i < count; i++)
+            {
+                if (items[i].Equals(itemToRemove))
+                {
+
+                    count--;
+                }
             }
         }
         public T this[int index]
