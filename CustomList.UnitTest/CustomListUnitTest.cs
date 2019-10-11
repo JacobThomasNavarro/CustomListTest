@@ -107,5 +107,41 @@ namespace CustomList.UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Remove_Remove1StringFromList_Index1Change()
+        {
+            // arrange
+            CustomList<string> testList = new CustomList<string>();
+            string expected = "Camp";
+            string actual;
+
+            // act
+            testList.Add("dev");
+            testList.Add("Code");
+            testList.Add("Camp");
+            testList.Remove("Code");
+            actual = testList[1];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ToString_IntItems_ToString()
+        {
+            // arrange
+            CustomList<string> testList = new CustomList<string>();
+            string expected = "ball";
+            string actual;
+
+            // act
+            testList.Add("b");
+            testList.Add("a");
+            testList.Add("l");
+            testList.Add("l");
+            actual = testList.ToString();
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

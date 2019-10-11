@@ -14,6 +14,7 @@ namespace CustomList
         private T[] newArray;
         public int capacity = 4;
         public int count = 0;
+        public string stringWord;
 
 
         public CustomList()
@@ -55,6 +56,21 @@ namespace CustomList
                     items[i] = items[i];
                 }
             }
+        }
+        public override string ToString()
+        {
+            string stringWord = "";
+            for(int i = 0; i < count; i++)
+            {
+                string word = items[i].ToString();
+                if(i == count)
+                {
+                    stringWord += word + "";
+                    break;
+                }
+                stringWord += word + "";
+            }
+            return stringWord;
         }
         public T this[int index]
         {
