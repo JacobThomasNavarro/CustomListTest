@@ -42,10 +42,17 @@ namespace CustomList
         {
             for(int i = 0; i < count; i++)
             {
-                if (items[i].Equals(itemToRemove))
+                if (itemToRemove.Equals(items[i]))
                 {
-
                     count--;
+                    for (int j = i; j < (count + 1); j++)
+                    {
+                        items[j] = items[j + 1];
+                    }
+                }
+                else
+                {
+                    items[i] = items[i];
                 }
             }
         }
