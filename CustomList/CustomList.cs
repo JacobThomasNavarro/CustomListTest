@@ -36,7 +36,7 @@ namespace CustomList
                 {
                     items[i] = newArray[i];
                 }
-                items[Count] = itemToAdd;
+                items[count] = itemToAdd;
             }
         }
         public void Remove(T itemToRemove)

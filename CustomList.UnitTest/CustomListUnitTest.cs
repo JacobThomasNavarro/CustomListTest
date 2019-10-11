@@ -126,7 +126,7 @@ namespace CustomList.UnitTest
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void ToString_IntItems_ToString()
+        public void ToString_StringItems_ToString()
         {
             // arrange
             CustomList<string> testList = new CustomList<string>();
@@ -138,6 +138,24 @@ namespace CustomList.UnitTest
             testList.Add("a");
             testList.Add("l");
             testList.Add("l");
+            actual = testList.ToString();
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ToString_IntItems_ToString()
+        {
+            // arrange
+            CustomList<int> testList = new CustomList<int>();
+            string expected = "1234";
+            string actual;
+
+            // act
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(3);
+            testList.Add(4);
             actual = testList.ToString();
 
             // assert
