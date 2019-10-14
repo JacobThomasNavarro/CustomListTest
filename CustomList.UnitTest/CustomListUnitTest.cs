@@ -161,5 +161,19 @@ namespace CustomList.UnitTest
             // assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void OperatorOverload_ListOfObjects_Concatenate()
+        {
+            // arrange
+            CustomList<int> l1 = new CustomList<int>() { 1, 2, 3, 4 };
+            CustomList<int> l2 = new CustomList<int>() { 5, 6, 7, 8 };
+            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+            // act
+            CustomList<int> actual = l1 + l2;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
