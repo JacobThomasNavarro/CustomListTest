@@ -102,20 +102,40 @@ namespace CustomList
         }
         public static CustomList<T> operator -(CustomList<T> l1, CustomList<T> l2)
         {
-            CustomList<T> removingItem = new CustomList<T>();
-            CustomList<T> combinedArray = new CustomList<T>();
             for(int i = 0; i < l1.count; i++)
             {
                 for(int j = 0; j < l2.count; j++)
                 {
                     if (l1[i].Equals(l2[j]))
                     {
-                        removingItem.Add(l1[i]);
-                        j = l1.count;
+                        l1.Remove(l1[i]);
                     }
                 }
             }
-            return combinedArray;
+            return l1;
+        }
+        public static CustomList<T> ZipIt(dynamic l1, dynamic l2)
+        {
+            CustomList<T> customList = new CustomList<T>();
+            for(int i = 0; i < l1.count; i++)
+            {
+                customList.Add(l1[i] + l2[i]);
+            }
+            for(int i = l1.count; i < l2.count; i++)
+            {
+                customList.Add(l2[i]);
+            }
+            return customList;
+        }
+        public void Sort()
+        {
+            for(int i = 0; i < count; i++)
+            {
+                for(int j = 0; j < count; j++)
+                {
+                    if()
+                }
+            }
         }
 
         public T this[int index]
